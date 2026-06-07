@@ -9,7 +9,9 @@ function Dashboard() {
 
   const fetchLeads = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/leads");
+      const res = await axios.get(
+        "https://lead-management-crm-api.onrender.com/api/leads",
+      );
       setLeads(res.data);
     } catch (error) {
       console.log(error);
@@ -22,7 +24,9 @@ function Dashboard() {
 
   const deleteLead = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/leads/${id}`);
+      await axios.delete(
+        `https://lead-management-crm-api.onrender.com/api/leads/${id}`,
+      );
       fetchLeads(); // refresh table after delete
     } catch (error) {
       console.log(error);
@@ -31,7 +35,10 @@ function Dashboard() {
 
   const updateStatus = async (id, status) => {
     try {
-      await axios.put(`http://localhost:5000/api/leads/${id}`, { status });
+      await axios.put(
+        `https://lead-management-crm-api.onrender.com/api/leads/${id}`,
+        { status },
+      );
       fetchLeads();
     } catch (error) {
       console.log(error);

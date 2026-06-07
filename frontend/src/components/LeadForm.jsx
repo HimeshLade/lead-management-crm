@@ -22,7 +22,10 @@ function LeadForm({ onLeadAdded }) {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/leads", formData);
+      await axios.post(
+        "https://lead-management-crm-api.onrender.com/api/leads",
+        formData,
+      );
 
       setFormData({
         name: "",
