@@ -65,7 +65,7 @@ function Dashboard() {
 
   return (
     <div className="dashboard-container">
-      <h2>Dashboard</h2>
+      <h2>Lead Management Dashboard</h2>
       <div>
         <h3>Lead Statistics</h3>
 
